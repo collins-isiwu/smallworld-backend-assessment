@@ -105,31 +105,11 @@ pip install -r requirements.txt
 python manage.py makemigrations rewards
 ```
 
-## 4. Apply migrations
+## 5. Apply migrations
 
 ```bash
 python manage.py migrate
 ```
-
-
-
-### Apply changes
-
-```bash
-python manage.py audit_stale_rewards --fix
-```
-
-Example:
-
-```text
-Found 3 stale reward(s).
-cash: 2
-voucher: 1
-Expired 3 stale reward(s).
-```
-
-Individual expired reward IDs are also written to the Python application logger at INFO level.
-
 ---
 
 # Testing Q8
@@ -143,26 +123,10 @@ python manage.py seed_rewards
 ```
 
 
-## 2. Run the dry run
+## 2. Run Q8 assessment
 
 ```bash
 python manage.py audit_stale_rewards
-```
-
-Expected output:
-
-```text
-Found 3 stale reward(s).
-cash: 2
-voucher: 1
-```
-
-At this point, no records should have been modified.
-
-## 3. Apply the fix
-
-```bash
-python manage.py audit_stale_rewards --fix
 ```
 
 ---
